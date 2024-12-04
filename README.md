@@ -1,52 +1,4 @@
-<div align="center">
-  <br />
-    <a href="https://youtu.be/O5cmLDVTgAs?feature=shared" target="_blank">
-      <img src="https://github.com/adrianhajdin/threads/assets/151519281/a9cd1088-968b-4b1d-b21a-f5f97d0c202b" alt="Project Banner">
-    </a>
-  <br />
-
-  <div>
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
-    <img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="mongodb" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-    <img src="https://img.shields.io/badge/-Clerk-black?style=for-the-badge&logoColor=white&logo=clerk&color=6C47FF" alt="clerk" />
-    <img src="https://img.shields.io/badge/-Shadcn_UI-black?style=for-the-badge&logoColor=white&logo=shadcnui&color=000000" alt="shadcnui" />
-    <img src="https://img.shields.io/badge/-Zod-black?style=for-the-badge&logoColor=white&logo=zod&color=3E67B1" alt="zod" />
-    <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
-  </div>
-
-  <h3 align="center">A full stack Threads Clone</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
-</div>
-
-## 📋 <a name="table">Table of Contents</a>
-
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/O5cmLDVTgAs?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
-## <a name="introduction">🤖 Introduction</a>
-
-Build a full stack Threads clone using Next.js 14+ with a redesigned look transformed from a Figma design, user interaction to community management, technical implementation, and various features, including nested deep comments, notifications, real-time-search, and more.  
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+# Retro
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -65,13 +17,13 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Authentication**: Authentication using Clerk for email, password, and social logins (Google and GitHub) with a comprehensive profile management system.
 
-👉 **Visually Appealing Home Page**: A visually appealing home page showcasing the latest threads for an engaging user experience.
+👉 **Visually Appealing Home Page**: A visually appealing home page showcasing the latest retro for an engaging user experience.
 
-👉 **Create Thread Page**: A dedicated page for users to create threads, fostering community engagement
+👉 **Create Thread Page**: A dedicated page for users to create retro, fostering community engagement
 
-👉 **Commenting Feature**: A commenting feature to facilitate discussions within threads.
+👉 **Commenting Feature**: A commenting feature to facilitate discussions within retro.
 
-👉 **Nested Commenting**: Commenting system with nested threads, providing a structured conversation flow.
+👉 **Nested Commenting**: Commenting system with nested retro, providing a structured conversation flow.
 
 👉 **User Search with Pagination**: A user search feature with pagination for easy exploration and discovery of other users.
 
@@ -83,11 +35,11 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Community Member Management**: A user-friendly interface to manage community members, allowing role changes and removals.
 
-👉 **Admin-Specific Community Threads**: Enable admins to create threads specifically for their community.
+👉 **Admin-Specific Community retro**: Enable admins to create retro specifically for their community.
 
 👉 **Community Search with Pagination**: A community search feature with pagination for exploring different communities.
 
-👉 **Community Profiles**: Display community profiles showcasing threads and members for a comprehensive overview.
+👉 **Community Profiles**: Display community profiles showcasing retro and members for a comprehensive overview.
 
 👉 **Figma Design Implementation**: Transform Figma designs into a fully functional application with pixel-perfect and responsive design.
 
@@ -126,8 +78,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/threads.git
-cd threads
+git clone https://github.com/adrianhajdin/retro.git
+cd retro
 ```
 
 **Installation**
@@ -460,7 +412,7 @@ export async function fetchCommunityPosts(id: string) {
     connectToDB();
 
     const communityPosts = await Community.findById(id).populate({
-      path: "threads",
+      path: "retro",
       model: Thread,
       populate: [
         {
@@ -667,7 +619,7 @@ export async function deleteCommunity(communityId: string) {
       throw new Error("Community not found");
     }
 
-    // Delete all threads associated with the community
+    // Delete all retro associated with the community
     await Thread.deleteMany({ community: communityId });
 
     // Find all users who are part of the community
@@ -810,13 +762,13 @@ export const sidebarLinks = [
 ];
 
 export const profileTabs = [
-  { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
+  { value: "retro", label: "retro", icon: "/assets/reply.svg" },
   { value: "replies", label: "Replies", icon: "/assets/members.svg" },
   { value: "tagged", label: "Tagged", icon: "/assets/tag.svg" },
 ];
 
 export const communityTabs = [
-  { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
+  { value: "retro", label: "retro", icon: "/assets/reply.svg" },
   { value: "members", label: "Members", icon: "/assets/members.svg" },
   { value: "requests", label: "Requests", icon: "/assets/request.svg" },
 ];
@@ -1277,7 +1229,7 @@ export async function fetchPosts(pageNumber = 1, pageSize = 20) {
   // Calculate the number of posts to skip based on the page number and page size.
   const skipAmount = (pageNumber - 1) * pageSize;
 
-  // Create a query to fetch the posts that have no parent (top-level threads) (a thread that is not a comment/reply).
+  // Create a query to fetch the posts that have no parent (top-level retro) (a thread that is not a comment/reply).
   const postsQuery = Thread.find({ parentId: { $in: [null, undefined] } })
     .sort({ createdAt: "desc" })
     .skip(skipAmount)
@@ -1299,7 +1251,7 @@ export async function fetchPosts(pageNumber = 1, pageSize = 20) {
       },
     });
 
-  // Count the total number of top-level posts (threads) i.e., threads that are not comments.
+  // Count the total number of top-level posts (retro) i.e., retro that are not comments.
   const totalPostsCount = await Thread.countDocuments({
     parentId: { $in: [null, undefined] },
   }); // Get the total count of posts
@@ -1336,13 +1288,13 @@ export async function createThread({ text, author, communityId, path }: Params
 
     // Update User model
     await User.findByIdAndUpdate(author, {
-      $push: { threads: createdThread._id },
+      $push: { retro: createdThread._id },
     });
 
     if (communityIdObject) {
       // Update Community model
       await Community.findByIdAndUpdate(communityIdObject, {
-        $push: { threads: createdThread._id },
+        $push: { retro: createdThread._id },
       });
     }
 
@@ -1352,16 +1304,16 @@ export async function createThread({ text, author, communityId, path }: Params
   }
 }
 
-async function fetchAllChildThreads(threadId: string): Promise<any[]> {
-  const childThreads = await Thread.find({ parentId: threadId });
+async function fetchAllChildretro(threadId: string): Promise<any[]> {
+  const childretro = await Thread.find({ parentId: threadId });
 
-  const descendantThreads = [];
-  for (const childThread of childThreads) {
-    const descendants = await fetchAllChildThreads(childThread._id);
-    descendantThreads.push(childThread, ...descendants);
+  const descendantretro = [];
+  for (const childThread of childretro) {
+    const descendants = await fetchAllChildretro(childThread._id);
+    descendantretro.push(childThread, ...descendants);
   }
 
-  return descendantThreads;
+  return descendantretro;
 }
 
 export async function deleteThread(id: string, path: string): Promise<void> {
@@ -1375,43 +1327,43 @@ export async function deleteThread(id: string, path: string): Promise<void> {
       throw new Error("Thread not found");
     }
 
-    // Fetch all child threads and their descendants recursively
-    const descendantThreads = await fetchAllChildThreads(id);
+    // Fetch all child retro and their descendants recursively
+    const descendantretro = await fetchAllChildretro(id);
 
     // Get all descendant thread IDs including the main thread ID and child thread IDs
     const descendantThreadIds = [
       id,
-      ...descendantThreads.map((thread) => thread._id),
+      ...descendantretro.map((thread) => thread._id),
     ];
 
     // Extract the authorIds and communityIds to update User and Community models respectively
     const uniqueAuthorIds = new Set(
       [
-        ...descendantThreads.map((thread) => thread.author?._id?.toString()), // Use optional chaining to handle possible undefined values
+        ...descendantretro.map((thread) => thread.author?._id?.toString()), // Use optional chaining to handle possible undefined values
         mainThread.author?._id?.toString(),
       ].filter((id) => id !== undefined)
     );
 
     const uniqueCommunityIds = new Set(
       [
-        ...descendantThreads.map((thread) => thread.community?._id?.toString()), // Use optional chaining to handle possible undefined values
+        ...descendantretro.map((thread) => thread.community?._id?.toString()), // Use optional chaining to handle possible undefined values
         mainThread.community?._id?.toString(),
       ].filter((id) => id !== undefined)
     );
 
-    // Recursively delete child threads and their descendants
+    // Recursively delete child retro and their descendants
     await Thread.deleteMany({ _id: { $in: descendantThreadIds } });
 
     // Update User model
     await User.updateMany(
       { _id: { $in: Array.from(uniqueAuthorIds) } },
-      { $pull: { threads: { $in: descendantThreadIds } } }
+      { $pull: { retro: { $in: descendantThreadIds } } }
     );
 
     // Update Community model
     await Community.updateMany(
       { _id: { $in: Array.from(uniqueCommunityIds) } },
-      { $pull: { threads: { $in: descendantThreadIds } } }
+      { $pull: { retro: { $in: descendantThreadIds } } }
     );
 
     revalidatePath(path);
@@ -1593,9 +1545,9 @@ export async function fetchUserPosts(userId: string) {
   try {
     connectToDB();
 
-    // Find all threads authored by the user with the given userId
-    const threads = await User.findOne({ id: userId }).populate({
-      path: "threads",
+    // Find all retro authored by the user with the given userId
+    const retro = await User.findOne({ id: userId }).populate({
+      path: "retro",
       model: Thread,
       populate: [
         {
@@ -1614,9 +1566,9 @@ export async function fetchUserPosts(userId: string) {
         },
       ],
     });
-    return threads;
+    return retro;
   } catch (error) {
-    console.error("Error fetching user threads:", error);
+    console.error("Error fetching user retro:", error);
     throw error;
   }
 }
@@ -1684,18 +1636,18 @@ export async function getActivity(userId: string) {
   try {
     connectToDB();
 
-    // Find all threads created by the user
-    const userThreads = await Thread.find({ author: userId });
+    // Find all retro created by the user
+    const userretro = await Thread.find({ author: userId });
 
     // Collect all the child thread ids (replies) from the 'children' field of each user thread
-    const childThreadIds = userThreads.reduce((acc, userThread) => {
+    const childThreadIds = userretro.reduce((acc, userThread) => {
       return acc.concat(userThread.children);
     }, []);
 
-    // Find and return the child threads (replies) excluding the ones created by the same user
+    // Find and return the child retro (replies) excluding the ones created by the same user
     const replies = await Thread.find({
       _id: { $in: childThreadIds },
-      author: { $ne: userId }, // Exclude threads authored by the same user
+      author: { $ne: userId }, // Exclude retro authored by the same user
     }).populate({
       path: "author",
       model: User,
@@ -1752,10 +1704,10 @@ export function formatDateString(dateString: string) {
 // created by chatgpt
 export function formatThreadCount(count: number): string {
   if (count === 0) {
-    return "No Threads";
+    return "No retro";
   } else {
     const threadCount = count.toString().padStart(2, "0");
-    const threadWord = count === 1 ? "Thread" : "Threads";
+    const threadWord = count === 1 ? "Thread" : "retro";
     return `${threadCount} ${threadWord}`;
   }
 }
@@ -1763,30 +1715,4 @@ export function formatThreadCount(count: number): string {
 
 </details>
 
-## <a name="links">🔗 Links</a>
-
-Assets used in the project are [here](https://drive.google.com/file/d/1lg7MMKgXwFabymHi1qxRYMxWVXiZPM9l/view)
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js 14 Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://jsmastery.pro/next14" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/557837ce-f612-4530-ab24-189e75133c71" alt="Project Banner">
-</a>
-
-<br />
-<br />
-
-**Accelerate your professional journey with the Expert Training program**
-
-And if you're hungry for more than just a course and want to understand how we learn and tackle tech challenges, hop into our personalized masterclass. We cover best practices, different web skills, and offer mentorship to boost your confidence. Let's learn and grow together!
-
-<a href="https://www.jsmastery.pro/masterclass" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/fed352ad-f27b-400d-9b8f-c7fe628acb84" alt="Project Banner">
-</a>
-
-#
 # Retro
