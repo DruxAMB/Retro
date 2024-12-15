@@ -25,6 +25,11 @@ export const sidebarLinks = [
     label: "Communities",
   },
   {
+    imgURL: "/assets/live-score.svg",
+    route: "/live-score",
+    label: "Live Score",
+  },
+  {
     imgURL: "/assets/user.svg",
     route: "/profile",
     label: "Profile",
